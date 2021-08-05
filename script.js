@@ -15,9 +15,10 @@ btn_toggle.onclick = () => {
   if(btn_toggle.innerText=="Show Calculation"){
       btn_toggle.innerText = "Show Author";
       let id = 630610715;
-      let add = length.value;
+      var add = parseInt(length.value);
+      // let add = Number("length.value")
       let sum = id+add;
-      author.innerText = sum
+      author.innerText = (sum).toString();
   }else{
       btn_toggle.innerText = "Show Calculation";
       author.innerText = "630610715 KANYANATTHAWEE SIRI";
@@ -30,7 +31,7 @@ btn_search.onclick = () => {
   var search = " "
   for(let i =0; i< arr.length; i++){
     if(arr[i].length > length.value){
-      search += "<span style = 'color: " + color.value +"' >" + arr[i] + "</span>" +" "
+      search += "<span style = 'color: " + color.value + "' >" + arr[i] + "</span>" + " "
     }else{
       search += arr[i]+" "
     }
